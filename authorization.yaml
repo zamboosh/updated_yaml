@@ -3,16 +3,16 @@ kind: Dbroadmap
 metadata:
   name: zamboosh-authentication-users-db
   description: Authentication users db
-schemas:
-  - user:
-    - id: [integer, index, incremental, unique]
-    - full_name: [datatype, index]
-    - hash_password: [string]
-  - session:
-    - timestamp: [date]
-    - authorized: [boolean, defalte:false]
-    - user_id: [integer]
 spec:
+  schemas:
+    - user:
+      - id: [integer, index, incremental, unique]
+      - full_name: [datatype, index]
+      - hash_password: [string]
+    - session:
+      - timestamp: [date]
+      - authorized: [boolean, defalte:false]
+      - user_id: [integer]
   db_type: sql
   lifecycle: prod
   owner: team-a
