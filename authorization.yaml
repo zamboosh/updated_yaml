@@ -1,0 +1,20 @@
+apiVersion: DBRoadmap/v1
+kind: DataEntity
+metadata:
+  description: Authentication users db
+schemes:
+  - user:
+    - id: [integer, index, incremental, unique]
+    - full_name: [datatype, index]
+    - hush_password: [string]
+  - session:
+    - timestamp: [date]
+    - authorized: [boolean, defalte:false]
+    - user_id: [integer]
+spec:
+  db_type: sql
+  lifecycle: prod
+  owner: team-a
+  port: 3036
+  user_permissions:
+    - example-website: curdx
