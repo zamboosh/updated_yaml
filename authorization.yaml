@@ -2,11 +2,11 @@ apiVersion: DBRoadmap/v1
 kind: DataEntity
 metadata:
   description: Authentication users db
-schemes:
+schemas:
   - user:
     - id: [integer, index, incremental, unique]
     - full_name: [datatype, index]
-    - hush_password: [string]
+    - hash_password: [string]
   - session:
     - timestamp: [date]
     - authorized: [boolean, defalte:false]
