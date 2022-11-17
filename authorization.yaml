@@ -1,6 +1,7 @@
 apiVersion: DBRoadmap/v1
 kind: DataEntity
 metadata:
+  name: zamboosh-authentication-users-db
   description: Authentication users db
 schemas:
   - user:
