@@ -1,5 +1,5 @@
-apiVersion: DBRoadmap/v1
-kind: DataEntity
+apiVersion: backstage.io/v1alpha1
+kind: Dbroadmap
 metadata:
   name: zamboosh-authentication-users-db
   description: Authentication users db
